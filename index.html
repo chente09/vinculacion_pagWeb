@@ -2,10 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CDI-MIESS</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+    <header>
+        <div class="dropdown-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div> 
+        <nav class="side-nav">
+            <ul>
+                <li><a href="#">Nuestra Historia</a></li>
+                <li><a href="#">Articulacion MIES</a></li>
+                <li><a href="#">Hojas De Trabajo</a></li>
+                <li><a href="#">Planificaciones</a></li>
+            </ul>
+        </nav>
+        
+        <div class="logo">CDI-MIESS</div>
+        
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="#" class="active">Inicio</a>
+                </li>
+                <li>
+                    <a href="#">¿Quiénes Somos?</a>
+                </li>
+                <li>
+                    <a href="#">Recursos Didácticos</a>
+                </li>
+                <li>
+                    <a href="#">Capacitaciones</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+
+        hamburger.onclick = function() {
+            const navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+
+        dropdownMenu.onclick = function() {
+            const sideNav = document.querySelector(".side-nav");
+            sideNav.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
