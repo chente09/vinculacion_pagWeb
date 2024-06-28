@@ -91,7 +91,7 @@ header {
 
 .hamburger .line {
     width: 30px;
-    height: 3px;
+    height: 4px;
     background: var(--text-color);
     margin: 6px 0;
 }
