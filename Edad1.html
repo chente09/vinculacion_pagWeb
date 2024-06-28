@@ -6,36 +6,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/edad1.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
-    <div class="top-bar"></div>
+    <!-- HEADER-->
+
+    <header>
+        <div class="logo">CDI-MIESS</div>
+
+        <button class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </button>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="index.html" class="active">Inicio</a>
+                </li>
+                <li>
+                    <a href="#">¿Quiénes Somos?</a>
+                </li>
+                <li>
+                    <a href="herramientas.html">Herramientas Didácticas</a>
+                </li>
+                <li>
+                    <a href="consejeria.html">Concejería Familiar</a>
+                </li>
+                <li>
+                    <a href="#">Biblioteca</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PAGINA-->
+
     <div class="container">
-        <div class="left-section">
-            <h1>EDAD 1</h1>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi nulla quis possimus illo magnam
-                voluptatem! Harum repudiandae iure ducimus numquam ipsa quia doloribus, minima officiis, ullam,
-                molestiae deleniti veritatis obcaecati?
-            </p>
+
+        <div class="titlebox">
+            <span class="title">
+                EDAD 1
+            </span>
+            <span class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </span>
         </div>
-        <div class="right-section">
-            <video controls>
-                <source src="video.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
+
+        <div class="info">
+            <div class="text-info">
+                <h3>Descripción</h3><br>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam obcaecati illum quidem iure eaque
+                    quis nemo optio vel voluptas voluptates ea suscipit officia expedita atque tempora unde, veritatis
+                    tenetur repellat?
+                </p>
+            </div>
+            <div class="info-video">
+                <video controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
         </div>
     </div>
 
+
+
+
+
+    <div class="cards-section">
+        <div class="card">
+            
+            <img src="imgs/Lenguaje.jpg" alt="Descripción de la imagen 1">
+        </div>
+        <div class="card">
+            
+            <img src="imgs/Motor.jpg" alt="Descripción de la imagen 2">
+        </div>
+        <div class="card">
+            
+            <img src="imgs/Lenguaje.jpg" alt="Descripción de la imagen 3">
+        </div>
+        <div class="card">
+            
+            <img src="imgs/Motor.jpg" alt="Descripción de la imagen 4">
+        </div>
+    </div>
+    
+    <div class="text-section">
+        <div>
+            <p>Manifestaciones del Lenguaje</p>
+        </div>
+        <div>
+            <p>Descubrimiento del medio natural y cultural</p>
+        </div>
+        <div>
+            <p>Vinculación emocional y social</p>
+        </div>
+        <div>
+            <p>Exploración del cuerpo y motricidad</p>
+        </div>
+    </div>
+
+
+
+       
+        <!-- FOOTER-->
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section about">
+                    <h2>Sobre Nosotros</h2>
+                    <p>CDI-MIESS es una organización dedicada a brindar herramientas didácticas y apoyo a familias.</p>
+                </div>
+                <div class="footer-section links">
+                    <h2>Enlaces Rápidos</h2>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="#">¿Quiénes Somos?</a></li>
+                        <li><a href="herramientas.html">Herramientas Didácticas</a></li>
+                        <li><a href="consejeria.html">Concejería Familiar</a></li>
+                        <li><a href="#">Biblioteca</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h2>Contacto</h2>
+                    <p>Email: info@cdi-miess.org</p>
+                    <p>Teléfono: +123 456 789</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 CDI-MIESS. Todos los derechos reservados.
+            </div>
+        </footer>
+        <script src="js/main.js"></script>
+  
 </body>
-
-
-<div class="cards-section">
-    <div class="card">Manifestaciones del Lenguaje</div>
-    <div class="card">Descubrimiento del medio natural y cultural</div>
-    <div class="card">Vinculación emocional y social</div>
-    <div class="card">Exploración dfel cuerpo y motricidad</div>
-</div>
-
-<div class="bottom-bar"></div>
 </html>
