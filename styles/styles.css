@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
 
+:root {
+    --primary-colorA: #26B8CE;
+    --secondary-colorA: #EB8B1D;
+    --primary-colorB: #EA324E;
+    --secondary-colorB: #A9C940;
+    --text-color: #333;
+    --background-color: #FAF2E7;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -10,13 +19,13 @@
 }
 
 body {
-    background: #FAF2E7;
+    background: var(--background-color);
 }
 
 header {
     width: 100%;
     height: 80px;
-    background: #FCA55C;
+    background: var(--primary-colorA);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -24,21 +33,10 @@ header {
 }
 
 /* IZQUIERDA */
-.dropdown-menu {
-    cursor: pointer;
-    display: block;
-    align-items: center;
-}
-.dropdown-menu .line {
-    width: 30px;
-    height: 3px;
-    background: #FAF2E7;
-    margin: 6px 0;
-}
 .logo {
     font-size: 25px;
     font-weight: bold;
-    color: #FAF2E7;
+    color: var(--background-color);
 }
 /* SIDE NAV */
 
@@ -48,7 +46,7 @@ header {
     top: 80px;
     left: 0;
     width: 100vw;
-    background: #FCA55C;
+    background: var(--background-color);
     transition: 0.5s;
     overflow: hidden;
     display: none; /* Oculto por defecto */
@@ -67,7 +65,7 @@ header {
 }
 .side-nav ul li a {
     display: block;
-    color: #FAF2E7;
+    color: var(--background-color);
     font-size: 20px;
     padding: 10px 25px;
     border-radius: 50px;
@@ -75,8 +73,8 @@ header {
     margin: 0 5px;
 }
 .side-nav ul li a:hover {
-    color: #FCA55C;
-    background: #FAF2E7;
+    color: var(--primary-colorB);
+    background: var(--background-color);
 }
 .side-nav.active ul {
     opacity: 1;
@@ -85,7 +83,7 @@ header {
 .side-nav ul li {
     margin-bottom: 12px;
 }
-   
+
 /* DERECHA */
 .hamburger {
     display: none;
@@ -94,7 +92,7 @@ header {
 .hamburger .line {
     width: 30px;
     height: 3px;
-    background: #FAF2E7;
+    background: var(--text-color);
     margin: 6px 0;
 }
 
@@ -104,7 +102,7 @@ header {
 
 .nav-bar ul li a {
     display: block;
-    color: #FAF2E7;
+    color: var(--background-color);
     font-size: 20px;
     padding: 10px 25px;
     border-radius: 50px;
@@ -113,13 +111,13 @@ header {
 }
 
 .nav-bar ul li a:hover {
-    color: #FCA55C;
-    background: #FAF2E7;
+    color: var(--primary-colorB);
+    background: var(--background-color);
 }
 
 .nav-bar ul li a.active {
-    color: #FCA55C;
-    background: #FAF2E7;
+    color: var(--primary-colorB);
+    background: var(--background-color);
 }
 
 @media only screen and (max-width: 1320px) {
@@ -150,7 +148,7 @@ header {
         left: 0;
         right: 0;
         width: 100vw;
-        background: #FCA55C;
+        background: var(--primary-colorA);
         transition: 0.5s;
         overflow: hidden;
     }
@@ -175,37 +173,61 @@ header {
     .nav-bar ul li {
         margin-bottom: 12px;
     }
-    .side-nav {
-        height: 0;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100vw;
-        background: #FCA55C;
-        transition: 0.5s;
-        overflow: hidden;
-        display: none; /* Oculto por defecto */
-    }
+}
+/* Estilos para el footer */
+footer {
+    background: var(--primary-colorA);
+    color: var(--background-color);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    min-width: 250px;
+}
+
+.footer-section h2 {
+    margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+    color: var(--background-color);
     
-    .side-nav.active {
-        height: 350px;
-        display: block; /* Mostrar cuando está activo */
-    }
+}
+
+.footer-section ul {
+    padding-left: 0;
+    border-radius: 40;
+    overflow: hidden;
+}
+
+.footer-section ul li a {
+    color: var(--background-color);
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 40px; /* Añadir border-radius a los li */
+    transition: 0.3s;
     
-    .side-nav ul {
-        display: block;
-        width: fit-content;
-        margin: 20px auto 0 auto;
-        text-align: center;
-        transition: 0.5s;
-        opacity: 1;
-    }
-    
-    .side-nav.active ul {
-        opacity: 1;
-    }
-    
-    .side-nav ul li {
-        margin-bottom: 12px;
-    }
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-colorB);
+    background: var(--background-color);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid var(--background-color);
+    padding-top: 10px;
 }
