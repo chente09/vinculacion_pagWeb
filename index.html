@@ -4,64 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CDI-MIESS es una organización dedicada a brindar herramientas didácticas y apoyo a familias.">
     <title>CDI-MIESS</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
-        <div class="dropdown-menu">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div> 
-        <nav class="side-nav">
-            <ul>
-                <li><a href="#">Nuestra Historia</a></li>
-                <li><a href="#">Articulacion MIES</a></li>
-                <li><a href="#">Hojas De Trabajo</a></li>
-                <li><a href="#">Planificaciones</a></li>
-            </ul>
-        </nav>
-        
         <div class="logo">CDI-MIESS</div>
         
-        <div class="hamburger">
+        <button class="hamburger" >
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
-        </div>
+        </button>
         <nav class="nav-bar">
             <ul>
                 <li>
-                    <a href="#" class="active">Inicio</a>
+                    <a href="inicio.html" class="active">Inicio</a>
                 </li>
                 <li>
                     <a href="#">¿Quiénes Somos?</a>
                 </li>
                 <li>
-                    <a href="#">Recursos Didácticos</a>
+                    <a href="herramientas.html">Herramientas Didácticas</a>
                 </li>
                 <li>
-                    <a href="#">Capacitaciones</a>
+                    <a href="consejeria.html">Concejería Familiar</a>
+                </li>
+                <li>
+                    <a href="#">Biblioteca</a>
                 </li>
             </ul>
         </nav>
     </header>
-    
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const dropdownMenu = document.querySelector(".dropdown-menu");
-
-        hamburger.onclick = function() {
-            const navBar = document.querySelector(".nav-bar");
-            navBar.classList.toggle("active");
-        }
-
-        dropdownMenu.onclick = function() {
-            const sideNav = document.querySelector(".side-nav");
-            sideNav.classList.toggle("active");
-        }
-    </script>
-    <div class="nav hhh"></div>
+    <main>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam 
+                repudiandae ipsam rerum doloribus architecto numquam ducimus, ratione officiis. 
+                Quaerat amet aut aspernatur corrupti dolor, suscipit harum hic dicta ad consequatur.</p>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>Sobre Nosotros</h2>
+                <p>CDI-MIESS es una organización dedicada a brindar herramientas didácticas y apoyo a familias.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Enlaces Rápidos</h2>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">¿Quiénes Somos?</a></li>
+                    <li><a href="herramientas.html">Herramientas Didácticas</a></li>
+                    <li><a href="consejeria.html">Concejería Familiar</a></li>
+                    <li><a href="#">Biblioteca</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contacto</h2>
+                <p>Email: info@cdi-miess.org</p>
+                <p>Teléfono: +123 456 789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 CDI-MIESS. Todos los derechos reservados.
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
+
