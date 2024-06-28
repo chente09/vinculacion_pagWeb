@@ -1,0 +1,30 @@
+.container-flex{
+    display: flex;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.title{
+    color: #EB8B1D;
+    text-align: center;
+}
+
+.container-info{
+    text-align: justify;
+    width: 100%;
+    padding: 15px;
+    font-size: 5;
+    margin-top: 20px;
+}
+
+.logo-itsqmet{
+    width: 50px;
+}
+
+.btn{
+    color: #EB8B1D;
+}
+
+.card-title{
+    color: #EB8B1D;
+}
