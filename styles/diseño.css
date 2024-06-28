@@ -1,0 +1,82 @@
+/* Contenedor flex padre y responsive , No mover el flex-wrap porfavor */
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #ffffff;
+}
+/*  Columna de texto con flex normal porque no hubo problema por el tema del box*/
+.columna-texto {
+    flex: 1;
+    background-color: #A9C940;
+    padding: 150px;
+    border-radius: 20px;
+    border-top: 50px solid #EA324E;
+    box-sizing: border-box;
+    max-width: 45%;
+    max-height: 5%;
+}
+
+/*Puse grid en vez de flex porque no se resolvia un problema que tenia con el  acomodar el video 2 donde queria */
+.columna-videos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    flex-basis: 50%;
+    max-width: 50%;
+}
+/* Contenedor para los videos para que no se salgan y eso esto va con el iframe asi que no muevan nada */
+.video {
+    margin-bottom: 10px;
+    position: relative;
+    padding-top: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-top: 25px solid #EA324E;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+/* Clase para el video2 porque como  dije tuve problema con este xd*/
+.video2 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+/* Esto de aqui no muevan nada porfavor!*/
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Esto es para del responsive asi que tampoco lo muevan*/
+@media (max-width: 800px) {
+    .contenedor {
+        flex-direction: column;
+    }
+    .columna-texto, .columna-videos {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+}
+ /* Lo ultimo de aca no lo muevan tampoco o si quieren si es puro diseño para la columna2*/
+.columna-texto h1 {
+    font-size: 2.5em;
+    color: #eb1e04;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.columna-texto div {
+    font-size: 1em;
+    color: #000000;
+    margin-top: 0.5em;
+    text-align: center;
+}
