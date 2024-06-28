@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/didacticasPablo.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <!-- HEADER-->
+    <header>
+        <div class="logo">CDI-MIESS</div>
+
+        <button class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </button>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="index.html" class="active">Inicio</a>
+                </li>
+                <li>
+                    <a href="#">¿Quiénes Somos?</a>
+                </li>
+                <li>
+                    <a href="herramientas.html">Herramientas Didácticas</a>
+                </li>
+                <li>
+                    <a href="consejeria.html">Concejería Familiar</a>
+                </li>
+                <li>
+                    <a href="#">Biblioteca</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PAGINA-->
+    <div class="container">
+        <div class="titlebox">
+            <span class="title">LENGUAJE</span>
+        </div>
+        <div class="info">
+            <div class="text-info">
+                <h3>Descripción</h3><br>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam obcaecati illum quidem iure eaque quis nemo optio vel voluptas voluptates ea suscipit officia expedita atque tempora unde, veritatis tenetur repellat?
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="buttons-section">
+        <button id="teoria-btn">Teoría</button>
+        <button id="practica-btn">Práctica</button>
+    </div>
+
+    <div id="teoria-info" class="hidden">
+        <h3>Teoría del Tema</h3>
+        <p>
+            Aquí va la información teórica del tema.
+        </p>
+    </div>
+
+    <div id="practica-info" class="hidden">
+        <h3>Práctica del Tema</h3>
+        <p>
+            Aquí va la información práctica del tema.
+        </p>
+    </div>
+
+    <!-- FOOTER-->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>Sobre Nosotros</h2>
+                <p>CDI-MIESS es una organización dedicada a brindar herramientas didácticas y apoyo a familias.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Enlaces Rápidos</h2>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">¿Quiénes Somos?</a></li>
+                    <li><a href="herramientas.html">Herramientas Didácticas</a></li>
+                    <li><a href="consejeria.html">Concejería Familiar</a></li>
+                    <li><a href="#">Biblioteca</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contacto</h2>
+                <p>Email: info@cdi-miess.org</p>
+                <p>Teléfono: +123 456 789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 CDI-MIESS. Todos los derechos reservados.
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('teoria-btn').addEventListener('click', function () {
+            document.getElementById('teoria-info').classList.toggle('hidden');
+            document.getElementById('practica-info').classList.add('hidden');
+        });
+
+        document.getElementById('practica-btn').addEventListener('click', function () {
+            document.getElementById('practica-info').classList.toggle('hidden');
+            document.getElementById('teoria-info').classList.add('hidden');
+        });
+    </script>
+</body>
+
+</html>
