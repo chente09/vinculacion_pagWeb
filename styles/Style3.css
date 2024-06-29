@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.intro .card {
+    background-color: #EB8B1D;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.texto-box {
+    width: 50%;
+    padding: 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.texto {
+    font-size: 18px;
+    color: #050505;
+    font-weight: bold;
+}
+
+.texto-cuadro {
+    border: 3px solid #EB8B1D;
+    border-radius: 4%;
+    margin-bottom: 20px;
+    padding: 7px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.texto-cuadro ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+.texto-cuadro li {
+    margin: 7px 0;
+    padding: 10px;
+    background-color: #26B8CE;
+    border-radius: 15px;
+}
+
+.slider-container {
+    position: relative;
+    width: 50%;
+    max-width: 800px;
+    margin-left: 20px;
+    overflow: hidden;
+    border: 2px solid #26B8CE;
+    border-radius: 10px;
+    margin: 60px 0;
+    padding: 1px;
+}
+
+.slider-title {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 2px;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+    min-width: 100%;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.antes, .despues {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #26B8CE;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.despues {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.antes:hover, .despues:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+    .menu-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slider-container, .texto-box {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+        padding: 8px;
+    }
+}
