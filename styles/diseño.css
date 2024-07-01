@@ -11,10 +11,10 @@
 /*  Columna de texto con flex normal porque no hubo problema por el tema del box*/
 .columna-texto {
     flex: 1;
-    background-color: #A9C940;
+    background-color: #0fecec;
     padding: 150px;
     border-radius: 20px;
-    border-top: 50px solid #EA324E;
+    border-top: 50px solid #ea3232;
     box-sizing: border-box;
     max-width: 45%;
     max-height: 5%;
@@ -69,7 +69,7 @@
  /* Lo ultimo de aca no lo muevan tampoco o si quieren si es puro diseño para la columna2*/
 .columna-texto h1 {
     font-size: 2.5em;
-    color: #eb1e04;
+    color: #000000;
     margin-bottom: 0.5em;
     text-align: center;
 }
