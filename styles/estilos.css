@@ -1,0 +1,36 @@
+.text-column h1 {
+    font-size: 20px; 
+    margin-bottom: 10px; 
+}
+
+.text-column h2 {
+    font-size: 40px; 
+    margin-bottom: 8px; 
+}
+
+.container1 {
+    display: flex;
+}
+
+.image-column {
+    flex: 1; 
+    display: flex;
+    justify-content: end;
+    align-items: center; 
+    padding: 20px; 
+}
+
+.image-column img {
+    width: 40%; 
+    height: auto; 
+    border-radius: 15px;
+    box-sizing: border-box; 
+}
+
+.text-column {
+    flex: 1; 
+    padding: 20px; 
+}
+.text-column p {
+    max-width: 400px; 
+}
