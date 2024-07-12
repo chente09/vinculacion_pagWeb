@@ -104,12 +104,27 @@
     color: #F5971F;
 }
 
+.text-color h1{
+  color: #F5971F;
+}
+
 .box-text p{
     color: #20B4D9;
 }
 
 footer {
   grid-area: footer;
+}
+
+.unidad {
+  display: flex;
+  padding: 20px;
+  row-gap: 40px;
+  align-content: center;
+  justify-content: space-around;
+}
+.text-unidad{
+  width: 600px;
 }
 
 @media screen and (max-width: 768px) {
