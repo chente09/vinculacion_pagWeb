@@ -6,7 +6,7 @@
     --primary-colorB: #EA324E;
     --secondary-colorB: #A9C940;
     --text-color: #333;
-    --background-color: #1f1f1f00;
+    --background-color: #FAF2E7;
 }
 
 * {
@@ -19,7 +19,7 @@
 }
 
 body {
-    background: var(--background-color);
+    background: #fafeff17;
 }
 
 header {
