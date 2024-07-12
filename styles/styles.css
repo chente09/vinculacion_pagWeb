@@ -7,7 +7,7 @@
     --secondary-colorB: #A9C940;
     --text-color: #333;
     --background-color: #FAF2E7;
-  }
+}
 
 * {
     margin: 0;
@@ -23,77 +23,51 @@ body {
 }
 
 header {
-    width: 100%;
+    width: 90%; /* Reducir el ancho del header */
     height: 80px;
     background: var(--primary-colorA);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0 20px;
+    position: fixed;
+    top: 20px; /* Agregar margen superior */
+    left: 50%; /* Centramos horizontalmente */
+    transform: translateX(-50%); /* Ajustamos para la centrar la posición */
+    z-index: 1000;
+    border-radius: 10px; /* Añadimos bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añadimos una sombra sutil */
+    transition: all 0.3s ease;
 }
 
-/* IZQUIERDA */
 .logo {
     font-size: 25px;
     font-weight: bold;
     color: var(--background-color);
-}
-/* SIDE NAV */
-
-.side-nav {
-    height: 0;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100vw;
-    background: var(--background-color);
-    transition: 0.5s;
-    overflow: hidden;
-    display: none; /* Oculto por defecto */
-}
-.side-nav.active {
-    height: 350px;
-    display: block; /* Mostrar cuando está activo */
-}
-.side-nav ul {
-    display: block;
-    width: fit-content;
-    margin: 20px auto 0 auto;
-    text-align: center;
-    transition: 0.5s;
-    opacity: 1;
-}
-.side-nav ul li a {
-    display: block;
-    color: var(--background-color);
-    font-size: 20px;
-    padding: 10px 25px;
-    border-radius: 50px;
-    transition: 0.2s;
-    margin: 0 5px;
-}
-.side-nav ul li a:hover {
-    color: var(--primary-colorB);
-    background: var(--background-color);
-}
-.side-nav.active ul {
-    opacity: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.side-nav ul li {
-    margin-bottom: 12px;
-}
-
-/* DERECHA */
 .hamburger {
     display: none;
+    flex-direction: column;
+    cursor: pointer;
 }
 
 .hamburger .line {
     width: 30px;
-    height: 4px;
-    background: var(--text-color);
-    margin: 6px 0;
+    height: 3px;
+    background: var(--background-color);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin: 0 auto;
 }
 
 .nav-bar ul {
@@ -103,67 +77,47 @@ header {
 .nav-bar ul li a {
     display: block;
     color: var(--background-color);
-    font-size: 20px;
-    padding: 10px 25px;
-    border-radius: 50px;
-    transition: 0.2s;
-    margin: 0 5px;
+    font-size: 16px;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 0.3s ease;
+    margin: 0 10px;
 }
 
-.nav-bar ul li a:hover {
-    color: var(--primary-colorB);
-    background: var(--background-color);
-}
-
+.nav-bar ul li a:hover,
 .nav-bar ul li a.active {
     color: var(--primary-colorB);
-    background: var(--background-color);
-}
-
-@media only screen and (max-width: 1320px) {
-    header {
-        padding: 0 25px; 
-    }
-}
-
-@media only screen and (max-width: 1100px) {
-    header {
-        padding: 0 20px; 
-    }
+    font-size: 18px; /* Incrementar el tamaño de la fuente en hover */
 }
 
 @media only screen and (max-width: 900px) {
-    .dropdown-menu {
-        display: block;
-    }
     .hamburger {
-        display: block;
-        cursor: pointer;
+        display: flex;
     }
     
     .nav-bar {
-        height: 0;
-        position: absolute;
+        position: fixed;
         top: 80px;
         left: 0;
         right: 0;
-        width: 100vw;
+        width: 100%;
         background: var(--primary-colorA);
-        transition: 0.5s;
+        flex-direction: column;
+        height: 0;
         overflow: hidden;
+        transition: height 0.3s ease-in-out;
     }
     
     .nav-bar.active {
-        height: 350px;
+        height: 300px;
     }
     
     .nav-bar ul {
-        display: block;
-        width: fit-content;
-        margin: 20px auto 0 auto;
+        flex-direction: column;
+        width: 100%;
         text-align: center;
-        transition: 0.5s;
-        opacity: 1;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
     }
     
     .nav-bar.active ul {
@@ -171,15 +125,17 @@ header {
     }
     
     .nav-bar ul li {
-        margin-bottom: 12px;
+        margin: 15px 0;
     }
 }
+
 /* Estilos para el footer */
 footer {
     background: var(--primary-colorA);
     color: var(--background-color);
     padding: 40px 0;
     text-align: center;
+    margin-top: 100px; /* Asegurarse de que el contenido del footer no se solape con la navbar fija */
 }
 
 .footer-container {
@@ -202,7 +158,6 @@ footer {
 .footer-section ul,
 .footer-section li {
     color: var(--background-color);
-    
 }
 
 .footer-section ul {
@@ -216,9 +171,8 @@ footer {
     text-decoration: none;
     display: block;
     padding: 10px;
-    border-radius: 40px; /* Añadir border-radius a los li */
+    border-radius: 40px;
     transition: 0.3s;
-    
 }
 
 .footer-section ul li a:hover {
