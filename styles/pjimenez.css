@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 12px; /* Border radius adjusted */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Max width adjusted */
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0; /* Rounded corners only at the top */
+    transition: transform 0.3s ease; /* Transición solo para la imagen */
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-text {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-radius: 0 0 12px 12px; /* Rounded corners only at the bottom */
+}
+
+/* Ajuste para que el texto siempre sea visible */
+.card .card-text {
+    opacity: 1;
+}
+
+/* Estilos para los enlaces */
+.card a {
+    text-decoration: none;
+    color: inherit;
+    display: block; /
+}
+
+/* Estilos para el título */
+.card-text h2 {
+    font-weight: bold;
+    margin-bottom: 10px; /* Espacio adicional abajo del título */
+}
+
+/* Estilos para el texto */
+.card-text p {
+    font-weight: normal;
+    margin: 0; /* Eliminar el margen predeterminado */
+}
