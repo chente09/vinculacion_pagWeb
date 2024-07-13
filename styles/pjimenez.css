@@ -8,30 +8,25 @@
     background-color: #aae1f9;
 }
 
-
 .pj-card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 10px; /* Reducir el espacio entre tarjetas */
     padding: 20px;
     justify-items: center;
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    
-
-
-
 }
 
 .pj-card {
     border: 1px solid #ccc;
-    border-radius: 12px; /* Border radius adjusted */
+    border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     width: 100%;
-    max-width: 400px; /* Max width adjusted */
+    max-width: 300px; /* Reducir el ancho máximo */
     transition: box-shadow 0.3s ease;
 }
 
@@ -43,8 +38,8 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 12px 12px 0 0; /* Rounded corners only at the top */
-    transition: transform 0.3s ease; /* Transición solo para la imagen */
+    border-radius: 12px 12px 0 0;
+    transition: transform 0.3s ease;
 }
 
 .pj-card:hover img {
@@ -56,7 +51,8 @@
     padding: 10px;
     color: #fff;
     text-align: center;
-    border-radius: 0 0 12px 12px; /* Rounded corners only at the bottom */
+    border-radius: 0 0 12px 12px;
+    font-size: 0.8em; /* Reducir el tamaño de fuente */
 }
 
 /* Ajuste para que el texto siempre sea visible */
@@ -68,17 +64,19 @@
 .pj-card a {
     text-decoration: none;
     color: inherit;
-    display: block; /
+    display: block;
 }
 
 /* Estilos para el título */
 .pj-card-text h2 {
     font-weight: bold;
-    margin-bottom: 10px; /* Espacio adicional abajo del título */
+    margin-bottom: 10px;
+    font-size: 1.2em; /* Reducir el tamaño de fuente del título */
 }
 
 /* Estilos para el texto */
 .pj-card-text p {
     font-weight: normal;
-    margin: 0; /* Eliminar el margen predeterminado */
+    margin: 0;
+    font-size: 0.9em; /* Reducir el tamaño de fuente del texto */
 }
