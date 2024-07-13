@@ -1,24 +1,19 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
-
-.card-container {
+.pj-card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
     justify-items: center;
+    align-items: center;
     max-width: 1200px;
     width: 100%;
+    margin: 0
+
+
+
 }
 
-.card {
+.pj-card {
     border: 1px solid #ccc;
     border-radius: 12px; /* Border radius adjusted */
     overflow: hidden;
@@ -29,11 +24,11 @@ body {
     transition: box-shadow 0.3s ease;
 }
 
-.card:hover {
+.pj-card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card img {
+.pj-card img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -41,11 +36,11 @@ body {
     transition: transform 0.3s ease; /* Transición solo para la imagen */
 }
 
-.card:hover img {
+.pj-card:hover img {
     transform: scale(1.05);
 }
 
-.card-text {
+.pj-card-text {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
     color: #fff;
@@ -54,25 +49,25 @@ body {
 }
 
 /* Ajuste para que el texto siempre sea visible */
-.card .card-text {
+.pj-card .pj-card-text {
     opacity: 1;
 }
 
 /* Estilos para los enlaces */
-.card a {
+.pj-card a {
     text-decoration: none;
     color: inherit;
     display: block; /
 }
 
 /* Estilos para el título */
-.card-text h2 {
+.pj-card-text h2 {
     font-weight: bold;
     margin-bottom: 10px; /* Espacio adicional abajo del título */
 }
 
 /* Estilos para el texto */
-.card-text p {
+.pj-card-text p {
     font-weight: normal;
     margin: 0; /* Eliminar el margen predeterminado */
 }
